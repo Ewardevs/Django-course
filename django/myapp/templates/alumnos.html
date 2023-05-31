@@ -1,0 +1,7 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+{% for alumno in alumnos %}
+    <p>{{alumno.nombre_alumno}} con {{alumno.edad_alumno}} de edad esta en el proyecto {{alumno.proyecto}}</p>
+{% endfor %}
+{% endblock  %}

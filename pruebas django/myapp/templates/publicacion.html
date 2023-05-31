@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>publicacion</h1>
+    <select name="categorias" id="categorias">
+        <option value="todas" default>Todas</option>
+        {% for cate in categoria %}
+        <option value="{{cate.categoria}}">{{cate.categoria}}</option>
+        {% endfor %}
+    </select>
+
+    <ol>
+        {% for x in publicacion%}
+        <li><a href="/descripcion/{{x.titulo}}">{{x.titulo}}</a></li>
+        {% endfor %}
+    </ol>
+
+</body>
+</html>

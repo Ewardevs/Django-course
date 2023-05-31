@@ -1,0 +1,45 @@
+body{
+
+    background-color: aquamarine;
+    font-family: 'Times New Roman';
+}
+
+.navbar{
+    background-color: #404040;
+}
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.navbar ul li{
+    list-style: none;
+    color: aliceblue;
+}
+
+.navbar ul li a:hover{
+    color: aqua;
+}
+
+.container{
+    background-color: brown;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px  0;
+}
+
+.card{
+    color: black;
+    background-color: whitesmoke;
+    padding: 20px;
+    margin-bottom: 2px;
+}
+
+.miclase{
+    background-color: antiquewhite;
+    color: black;
+}
