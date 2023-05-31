@@ -1,7 +1,7 @@
 from django import forms
 from .models import *
 
-# aca creamos un nuevo formulario
+# aca creamos un nuevo formulario para tareas
 class createnewtask(forms.Form):
     title = forms.CharField(label="titulo de tarea",max_length=200,widget=forms.TextInput(attrs={"class":"miclase"}))
     description = forms.CharField(label="descripcion",widget=forms.Textarea)

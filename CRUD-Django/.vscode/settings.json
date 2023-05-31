@@ -1,0 +1,10 @@
+{
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "editor.wordWrap": "on",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
+}
