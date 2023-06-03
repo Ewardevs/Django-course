@@ -7,9 +7,9 @@
 <div style="border:1px solid black;margin:3px;">
     <p>{{task.title}}</p>
     {% if task.done == False %}
-    <p><b>tarea hecha</b></p>
+    <p><b>Tarea Pendiente</b></p>
     {% else %}
-    <b>tarea pendiente</b>
+    <b>Tarea Hecha</b>
     {% endif %}
     <p>{{task.description}}</p>
     <p>{{task.project.name}}</p>

@@ -39,3 +39,6 @@ class alumnos(models.Model):
     
     proyecto = models.ForeignKey(project,on_delete=models.CASCADE)
     
+    def __str__(self):
+        return self.nombre_alumno
+    

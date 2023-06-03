@@ -42,7 +42,6 @@ def tasks(request):
     })
 
 
-
 def mostraralumnos(request):
     alumno = alumnos.objects.all()
     return render(request,"alumnos.html",{
@@ -78,5 +77,3 @@ def projectdetail(request,id):
         "project":projects,
         "tareas" : tareas
     })
-        
-    
