@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+
+<main class="container">
+  <div class="col-md-6 offset-md-3">
+    <h1>Task pendig</h1>
+    <ul class="list-group">
+      {% for t in tasks %}
+      <a href="{% url 'task_details' t.id %}" class="list-group-item">
+
+        <header class="d-flex justify-between-content">
+          {% if t.important %}
+          <strong>{{t.title}}</strong>
+          {% else %}
+          <p>{{t.title}}</p>
+          {% endif %}
+        </header>
+        
+        <p>{{t.description}}</p>
+        <p>{{t.user.username}}</p>
+
+        <p>{{t.important}}</p>
+        <p>{{t.datecompleted|date:'M j'}}</p>
+      </a>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+
+{% endblock content %}

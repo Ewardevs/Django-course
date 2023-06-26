@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas con el mismo tamaño */
+    grid-gap: 10px; /* Espacio entre las celdas */
+  }
+  
+  .card {
+    background-color: #ccc;
+    padding: 10px;
+  }
+  

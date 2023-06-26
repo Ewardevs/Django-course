@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pokemones</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+    <h1 class="title">Pokemones</h1>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <input type="text" class="form-control" name="name" id="pokemones" placeholder="Pokemones" />
+        <button>buscar</button>
+      </div>
+    </form>
+    {% if buscador %}
+    {% for b in buscador %}
+    <div>
+      <div class="card" style="width: 18rem">
+        <img src="{{b.image_url}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{b.name}}</h5>
+          <p class="card-text">
+            <p>Tipo: {{b.type}}</p>
+            <p>Ataque: {{b.attack}}</p>
+            <p>Defensa: {{b.defense}}</p>
+          </p>
+          <a href="#" class="btn btn-primary">Ver mas</a>
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% endif %}
+
+    <div class="container">
+      {% for p in pokemons %}
+      <div class="card" style="width: 18rem">
+        <img src="{{p.image_url}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{p.name}}</h5>
+          <p class="card-text">
+            <p>Tipo: {{p.type}}</p>
+            <p>Ataque: {{p.attack}}</p>
+            <p>Defensa: {{p.defense}}</p>
+          </p>
+          <a href="#" class="btn btn-primary">Ver mas</a>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </body>
+</html>
